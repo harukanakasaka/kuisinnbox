@@ -9,9 +9,20 @@
         <div class="col-sm-6 offset-sm-3">
             
             {!! Form::open(['route' => 'login.post']) !!}
+                <div class="form-group">
+                    {!! Form::label('email', 'メール') !!}
+                    {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
+                </div>
+                
+                <div class="form-group">
+                    {!! Form::label('password', 'パスワード') !!}
+                    {!! Form::password('password', ['class' => 'form-control']) !!}
+                </div>
+                
+                {!! Form::submit('Log in', ['class' => 'btn btn-primary btn-block']) !!}
             {!! Form::close() !!}
             
-            <p class="mt-2">はじめての方はこちら{!! link_to_route('signup.get', '今すぐはじめる') !!}</p>
+            <p class="mt-2">はじめての方は{!! link_to_route('signup.get', 'こちら') !!}</p>
         </div>
     </div>
 @endsection

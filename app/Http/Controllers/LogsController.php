@@ -25,23 +25,57 @@ class LogsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            '商品名' => 'required|max:20',
-            'タイトル' => 'required|max:20',
-            'コメント' => 'required|max:191',
+            'product_name' => 'required|max:20',
+            'title' => 'required|max:20',
+            'comment' => 'required|max:191',
         ]);
         
         $request->user()->logs()->create([
-            '商品名' => $request->product_name,
-            'タイトル' => $request->title,
-            'コメント' => $request->comment,
+            'product_name' => $request->product_name,
+            'title' => $request->title,
+            'comment' => $request->comment,
             ]);
             
         return back();    
     }
     
+    public function edit($id)
+    {
+        $log = \App\Log::find($id);
+        
+        if(\Auth::id() == $log->user_id){
+            return view('users.edit', [
+                'log' => $log,
+            ]);
+        } else {
+            return redirect('/');
+        }
+    }
+    
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'product_name' => 'required|max:20',
+            'title' => 'required|max:20',
+            'comment' => 'required|max:191'
+        ]);
+        
+        $log = \App\Log::find($id);
+        
+        if(\Auth::id() == $log->user_id){
+            $log->product_name = $request->product_name;
+            $log->title = $request->title;
+            $log->comment = $request->comment;
+            $log->save();
+            return redirect('/');
+        } else {
+            return redirect('/');
+        }
+    }
+    
     public function destroy($id)
     {
-        $log = \App\log::find($id);
+        $log = \App\Log::find($id);
         
         if(\Auth::id() === $log->user_id) {
             $log->delete();

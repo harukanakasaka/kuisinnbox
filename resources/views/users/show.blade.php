@@ -3,7 +3,9 @@
 @section('comment')
     <div class="row">
         <aside class="col-sm-4">
-            
+            <div class="card">
+                <h3 class="card-title">{{ $user->name }}</h3>
+            </div>
         </aside>
         <div class="col-sm-8">
             <ul class="nav nav-tabs nav-justified mb-3">

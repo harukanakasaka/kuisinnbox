@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('comment')
+@section('content')
     <div class="text-center">
         <h1>登録</h1>
     </div>
