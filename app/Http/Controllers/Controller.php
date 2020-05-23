@@ -12,6 +12,10 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
     public function counts($user) {
+        $count_logs = $user->logs()->count();
         
+        return [
+            'count_logs' => $count_logs,
+            ];
     }
 }

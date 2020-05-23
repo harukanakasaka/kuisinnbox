@@ -2,6 +2,7 @@
 
 @section('comment')
     @if(Auth::check())
+        {{ Auth::user()->name }}
         <div class="row">
             <aside class="col-sm-4">
                 
