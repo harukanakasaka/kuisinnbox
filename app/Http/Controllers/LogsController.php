@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Log;
+
 class LogsController extends Controller
 {
     public function index()
@@ -41,7 +43,7 @@ class LogsController extends Controller
     
     public function edit($id)
     {
-        $log = \App\Log::find($id);
+        $log = Log::find($id);
         
         if(\Auth::id() == $log->user_id){
             return view('users.edit', [
@@ -60,7 +62,7 @@ class LogsController extends Controller
             'comment' => 'required|max:191'
         ]);
         
-        $log = \App\Log::find($id);
+        $log = Log::find($id);
         
         if(\Auth::id() == $log->user_id){
             $log->product_name = $request->product_name;
@@ -75,7 +77,7 @@ class LogsController extends Controller
     
     public function destroy($id)
     {
-        $log = \App\Log::find($id);
+        $log = Log::find($id);
         
         if(\Auth::id() === $log->user_id) {
             $log->delete();

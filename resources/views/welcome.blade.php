@@ -2,7 +2,7 @@
 
 @section('content')
     @if(Auth::check())
-        {{ Auth::user()->name }}
+        {{ Auth::user()->name }}のログ
         <div class="row">
             <div class="col-sm-8">
                 @if (Auth::id() == $user->id)

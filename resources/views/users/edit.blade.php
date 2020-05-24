@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>id: {{ $log->id }}の編集</h1>
+    <h1>編集</h1>
     <div class="row">
         <div class="col-6">
             {!! Form::model($log, ['route' => ['logs.update', $log->id], 'method' => 'put']) !!}
