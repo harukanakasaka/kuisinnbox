@@ -8,15 +8,6 @@ use App\User;
 
 class UsersController extends Controller
 {
-    public function index()
-    {
-        $user = User::orderBy('id', 'desc')->paginate(10);
-        
-        return view('users.index', [
-            'users' => $users,
-        ]);
-    }
-    
     public function show($id)
     {
         $user = User::find($id);
@@ -34,4 +25,37 @@ class UsersController extends Controller
             'user' => $user,
             ]);
     }
+    
+    public function followings($id)
+    {
+        $user = User::find($id);
+        $followings = $user->followings()->paginate(10);
+        //$logs = $user->logs()->orderBy('created_at', 'desc')->paginate(10);
+        
+        $data = [
+            'user' => $user,
+            'users' => $followings,
+            //'logs' => $logs
+            ];
+            
+        $data += $this->counts($user);
+        
+        return view('users.followings', $data);
+    }
+    
+    public function followers($id)
+    {
+        $user = User::find($id);
+        $followers = $user->followers()->paginate(10);
+        
+        $data = [
+            'user' => $user,
+            'users' => $followers,
+            ];
+            
+        $data += $this->counts($user);
+        
+        return view('users.followers', $data);
+    }
+    
 }

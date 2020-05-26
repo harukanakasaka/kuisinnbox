@@ -1,11 +1,11 @@
 @if (Auth::id() != $user->id)
     @if (Auth::user()->is_following($user->id))
         {!! Form::open(['route' => ['user.unfollow', $user->id], 'method' => 'delete']) !!}
-            {!! Form::submit('×フォロー', ['class' => "btn btn-danger btn-block"]) !!}
-        {!! Form::close() !!}
+            {!! Form::submit('×フォロー', ['class' => "btn btn-light rounded-pill btn-rem-6 negative"]) !!}
+        {!! Form::close() !!} 
     @else
         {!! Form::open(['route' => ['user.follow', $user->id]]) !!}
-            {!! Form::submit('フォロー', ['class' => "btn btn-primary btn-block"]) !!}
+            {!! Form::submit('フォロー', ['class' => "btn btn-light rounded-pill btn-rem-6 positive"]) !!}
         {!! Form::close() !!}
     @endif
 @endif

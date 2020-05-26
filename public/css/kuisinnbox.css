@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo
+    sans-serif;
+    /*background-color:antiquewhite !important;*/
+}
+
+header {
+    position:sticky !important;
+    top:0 !important;
+    z-index:999 !important;
+}
+
+h1 {
+    font-size:2.5rem !important;
+}
+
+h2 {
+    font-size:2rem !important;
+}
+
+.subtitle {
+    font-size:1.3rem;
+}
+
+.card-color {
+    background-color:antiquewhite !important;
+}
+
+.navbar-brand {
+    font-size:2.2rem !important;
+    color:darkred !important;
+}
+
+.nav-color {
+    color:darkred !important;
+}
+
+.navtab-color {
+    color:black;
+}
+
+.nav-size {
+    font-size:1.2rem !important;
+}
+
+.negative {
+    color:sienna !important;
+    background-color:white !important;
+}
+
+.positive {
+    color:white !important;
+    background-color:sienna !important;
+}
+
+.needed {
+    color:white !important;
+    background-color:rosybrown !important;
+}
+
+.btn-rem-6 {
+    width:6rem !important;
+}
+
+.btn-rem-7 {
+    width:7rem !important;
+}
+
+.btn-rem-10 {
+    width:10rem !important;
+}
+
+.btn-rem-13 {
+    width:13rem !important;
+}
+
+
+
+

@@ -6,8 +6,9 @@
                     <div>
                         {{ $user->name }}
                     </div>
-                    <div>
-                        <p>{!! link_to_route('users.others_show', 'もっとログを見る', ['id' => $user->id]) !!}</p>
+                    <div class="form-inline">
+                        @include('user_follow.follow_button', ['user' => $user])
+                        {!! link_to_route('users.show', 'もっとログを見る', ['id' => $user->id], ['class' => 'btn btn-light rounded-pill btn-rem-10 positive']) !!}
                     </div>
                 </div>
             </li>

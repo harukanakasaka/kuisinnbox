@@ -7,9 +7,7 @@
         </aside>
         <div class="col-sm-8 offset-2">
             @include('users.navtabs', ['user' => $user])
-            @if (count($logs) > 0) 
-                @include('logs.logs', ['logs' => $logs])
-            @endif
+            @include('users.users', ['users' => $users])
         </div>
     </div>
 @endsection    

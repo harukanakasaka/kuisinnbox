@@ -13,7 +13,7 @@ class LogsController extends Controller
         $data =[];
         if(\Auth::check()){
             $user = \Auth::user();
-            $logs = $user->logs()->orderBy('created_at', 'desc')->paginate(10);
+            $logs = $user->feed_logs()->orderBy('created_at', 'desc')->paginate(10);
             
             $data = [
                 'user' => $user,

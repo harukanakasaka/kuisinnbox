@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="text-center">
-        <h1>ログイン</h1>
+        <h2>ログイン</h2>
     </div>
     
     <div class="row">
@@ -10,7 +10,7 @@
             
             {!! Form::open(['route' => 'login.post']) !!}
                 <div class="form-group">
-                    {!! Form::label('email', 'メール') !!}
+                    {!! Form::label('email', 'メールアドレス') !!}
                     {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
                 </div>
                 
@@ -19,10 +19,12 @@
                     {!! Form::password('password', ['class' => 'form-control']) !!}
                 </div>
                 
-                {!! Form::submit('ログイン', ['class' => 'btn btn-primary btn-block']) !!}
+                <div class="text-center">
+                    {!! Form::submit('ログイン', ['class' => 'btn btn-light rounded-pill btn-rem-7 positive']) !!}
+                </div>
             {!! Form::close() !!}
             
-            <p class="mt-2">はじめての方は{!! link_to_route('signup.get', 'こちら') !!}</p>
+            <p class="mt-2">はじめての方は{!! link_to_route('signup.get', 'こちら', [], ['class' => 'nav-color']) !!}</p>
         </div>
     </div>
 @endsection
