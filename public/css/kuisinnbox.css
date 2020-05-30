@@ -16,6 +16,7 @@ body {
     line-height:1.6 !important;
     letter-spacing:0.06em !important;
     position:relative !important;
+    -webkit-text-size-adjust:100% !important;
     
 }
 
@@ -83,7 +84,7 @@ h2:before {
 .box:before, .box:after {
     content:'' !important;
     position:absolute !important;
-    top:-0.6rem !important;
+    top:-0.5rem !important;
     width:0.085rem !important;
     height:-webkit-calc(100% + 1.1rem) !important;
     height:calc(100% + 1.1rem);
@@ -101,14 +102,15 @@ h2:before {
 
 .card-color {
     width:58rem !important;
-    height:18rem !important;
+    height:19rem !important;
     background-color:white !important;
     border:solid tomato !important;
     border-radius:0.2rem !important;
 }
 
 .comment-space {
-    height:10rem !important;
+    padding-top:1rem !important;
+    height:7rem !important;
     width:40rem !important;
     word-break:break-all !important;
 }
@@ -118,16 +120,45 @@ h2:before {
     width:12rem !important;
 }
 
+.title {
+    height:1rem !important;
+    width:12rem !important;
+    margin-top:1rem !important;
+}
+
+.post {
+    margin-top:2rem !important;
+    margin-bottom:0rem !important;
+    padding-top:2rem !important;
+}
+
+.card-button {
+    margin-top:0rem !important;
+    padding-bottom:0rem !important;
+    margin-bottom:0rem !important;
+}
+
 .my-tape {
+    position:relative !important; top:0.9rem !important;
     width:30% !important;
     height:2.5rem !important;
-    margin:-2.3rem auto 0 !important;
+    margin:-3.5rem auto 0 !important;
     background-color:darkturquoise !important;
     transform:rotate(-2deg) !important;
     opacity:0.2 !important;
 }
 
 .others-tape {
+    position:relative !important; top:0.9rem !important;
+    width:30% !important;
+    height:2.5rem !important;
+    margin:-3.5rem auto 0 !important;
+    background-color:darkturquoise !important;
+    transform:rotate(-2deg) !important;
+    opacity:0.1 !important;
+}
+
+.others-tape-2 {
     width:30% !important;
     height:2.5rem !important;
     margin:-2.3rem auto 0 !important;
