@@ -41,6 +41,9 @@ return [
     |
     */
 
+    'default' => 'local',
+    'cloud' => 's3',
+
     'disks' => [
 
         'local' => [

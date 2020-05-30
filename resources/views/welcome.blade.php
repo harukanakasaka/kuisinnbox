@@ -2,11 +2,11 @@
 
 @section('content')
     @if(Auth::check())
-        <h2>{{ Auth::user()->name }}のログ</h2>
+        <h2 class="mb-4">{{ Auth::user()->name }}のログ</h2>
         <div class="row">
             <div class="col-sm-8 offset-2">
                 @if (Auth::id() == $user->id)
-                {!! Form::open(['route' => 'logs.store']) !!}
+                {!! Form::open(['route' => 'logs.store', 'method' => 'post', 'class' => 'form', 'files' => true]) !!}
                     <div class="form-group">
                         {!! Form::label('product_name', '商品名') !!}<span class="badge badge-pill needed">必須</span>
                         {!! Form::text('product_name', old('product_name'), ['class' => 'form-control', 'row' => '1']) !!}
@@ -20,32 +20,43 @@
                         {!! Form::textarea('comment', old('comment'), ['class' => 'form-control', 'row' => '2']) !!}
                     </div>  
                     <div class="form-group">
-                        {!! Form::submit('投稿', ['class' => 'btn btn-light rounded-pill btn-rem-6 positive']) !!}
-                    </div>    
+                        {!! Form::label('myfile', 'フォト') !!}<br>
+                        {!! Form::file('myfile', old('myfile')) !!}
+                    </div>
                     
+                    <div class="form-group">
+                        {!! Form::submit('投稿', ['class' => 'btn btn-light rounded-pill mt-3 btn-rem-6 positive']) !!}
+                    </div>    
+            </div>
+            <div class="col-sm-10 offset-1">
                 {!! Form::close() !!}
                 @endif    
                 @if (count($logs) > 0)
                     <ul class="list-unstyled">
                     @foreach ($user->logs as $log)
-                    <div class="card mb-2 pt-3 px-4 card-color">
+                    <div class="card my-5 pt-3 pb-1 px-4 card-color">
+                        <div class="my-tape"></div>
                         <li class="media mb-3">
                         <div class="media-left">
-                            <p class="mb-1 mr-5">{{ $log->product_name }}</p>
+                            <p class="title-space mb-0">{{ $log->product_name }}</p>
+                            @if ($log->myfile)
+                            <img src="{{ $log->myfile }}" width="180rem" height="180rem">
+                            @endif
                         </div>
-                        <div class="media-body">
+                        <div class="media-body ml-4">
                             <div>
-                                {{ $log->user->name }} <span class="text-muted">{{ $log->created_at }}に投稿</span>
+                                <p class="mb-3">{{ $log->title }}</p>
                             </div>
                             <div>
-                                <p class="mb-1">{{ $log->title }}</p>
-                                <p class="mb-0">{!! nl2br(e($log->comment)) !!}</p>
+                                <p class="comment-space mb-0">{!! nl2br(e($log->comment)) !!}</p>
                             </div>
+                            
                             <div>
+                                {{ $log->user->name }} <span class="text-muted ml-3">{{ $log->created_at }}に投稿</span>
                                 <div class="form-inline float-right">   
                                 @if (Auth::id() == $log->user_id)
                                 {!! Form::open(['route' => ['logs.destroy', $log->id], 'method' => 'delete']) !!}
-                                    {!! Form::submit('削除', ['class' => 'btn btn-light rounded-pill btn-rem-6 negative']) !!}
+                                    {!! Form::submit('削除', ['class' => 'btn btn-light rounded-pill btn-rem-6 mr-2 negative']) !!}
                                 {!! Form::close() !!}
                                 {!! link_to_route('logs.edit', '編集', ['id' => $log->id], ['class' => 'btn btn-light rounded-pill btn-rem-6 positive']) !!}
                             @endif
@@ -61,9 +72,14 @@
             </div>
         </div>
     @else
-            <div class="text-center pt-5">
-                <h1>あなたの知らないおいしいを見つけよう</h1>
-                {!! link_to_route('signup.get', '▶今すぐはじめる', [], ['class' => 'btn btn-lg light rounded-pill btn-rem-13 positive']) !!}
+            <div>
+                <img src="https://images.unsplash.com/photo-1518912006-3761723e528a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="画像" class="woman"/>
+            </div>
+            <div class="text-center mt-5">    
+                <h1 class="box">あなたの知らない<span class="oisii">おいしい</span>を見つけよう<br>
+                {!! link_to_route('signup.get', '▶今すぐはじめる', [], ['class' => 'btn btn-lg light rounded-pill mt-2 mb-1 btn-rem-13 lead']) !!}
+                </h1>
             </div>
     @endif    
 @endsection
+

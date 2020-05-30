@@ -109,7 +109,8 @@ return [
         'password' => 'パスワード',
         'product_name' => '商品名',
         'title' => 'タイトル',
-        'comment' => 'コメント'
+        'comment' => 'コメント',
+        'myfile' => 'フォト',
     ],
 
 ];

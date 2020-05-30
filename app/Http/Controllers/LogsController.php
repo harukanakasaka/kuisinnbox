@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Storage;
+
 use App\Log;
 
 class LogsController extends Controller
@@ -19,9 +21,9 @@ class LogsController extends Controller
                 'user' => $user,
                 'logs' => $logs,
                 ];
+                
         }
-        
-        return View('welcome', $data);
+        return view('welcome', $data);
     }
     
     public function store(Request $request)
@@ -30,15 +32,21 @@ class LogsController extends Controller
             'product_name' => 'required|max:20',
             'title' => 'required|max:20',
             'comment' => 'required|max:191',
+            'myfile' => 'required|image',
         ]);
+        
+        $image = $request->file('myfile');
+        $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+        $url = Storage::disk('s3')->url($path);
         
         $request->user()->logs()->create([
             'product_name' => $request->product_name,
             'title' => $request->title,
             'comment' => $request->comment,
+            'myfile' => $url
             ]);
             
-        return back();    
+        return back();  
     }
     
     public function edit($id)
@@ -59,7 +67,8 @@ class LogsController extends Controller
         $this->validate($request, [
             'product_name' => 'required|max:20',
             'title' => 'required|max:20',
-            'comment' => 'required|max:191'
+            'comment' => 'required|max:191',
+            'myfile' => 'required|image',
         ]);
         
         $log = Log::find($id);
@@ -68,6 +77,14 @@ class LogsController extends Controller
             $log->product_name = $request->product_name;
             $log->title = $request->title;
             $log->comment = $request->comment;
+            
+            $url = Storage::disk('s3')->url($log->id);
+            Storage::delete($url);
+            $image = $request->file('myfile');
+            $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+            $url = Storage::disk('s3')->url($path);
+            $log->myfile = $url;
+            
             $log->save();
             return redirect('/');
         } else {

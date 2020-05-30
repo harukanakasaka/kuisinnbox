@@ -35,7 +35,6 @@ class UsersController extends Controller
         $data = [
             'user' => $user,
             'users' => $followings,
-            //'logs' => $logs
             ];
             
         $data += $this->counts($user);

@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <h1>編集</h1>
+    <h2 class="mb-4">編集</h2>
     <div class="row">
-        <div class="col-6">
-            {!! Form::model($log, ['route' => ['logs.update', $log->id], 'method' => 'put']) !!}
+        <div class="col-8 offset-2">
+            {!! Form::model($log, ['route' => ['logs.update', $log->id], 'method' => 'put', 'class' => 'form', 'files' => true]) !!}
             
                 <div class="form-group">
                     {!! Form::label('product_name', '商品名') !!}
@@ -23,10 +23,15 @@
                 </div>
                 
                 <div class="form-group">
-                {!! Form::submit('更新', ['class' => 'btn btn-primary']) !!}
+                    {!! Form::label('myfile', 'フォト') !!}
+                    {!! Form::file('myfile', old('myfile')) !!}
                 </div>
-                
+            
+                <div class="form-group">
+                {!! Form::submit('更新', ['class' => 'btn btn-light rounded-pill btn-rem-7 positive']) !!}
+                </div>
             {!! Form::close() !!}    
+                
         </div>
     </div>
 

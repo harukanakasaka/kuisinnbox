@@ -1,67 +1,319 @@
 @charset "UTF-8";
 
 body {
-  font-family: "Helvetica Neue",
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo
-    sans-serif;
-    /*background-color:antiquewhite !important;*/
+    font-family: Verdana,
+  Roboto, 
+  "Droid Sans",
+  "游ゴシック", 
+  YuGothic, 
+  "メイリオ", 
+  Meiryo, 
+  "ヒラギノ角ゴ ProN W3", 
+  "Hiragino Kaku Gothic ProN", 
+  "ＭＳ Ｐゴシック", 
+  sans-serif;
+    font-weight:500 !important;
+    line-height:1.6 !important;
+    letter-spacing:0.06em !important;
+    position:relative !important;
+    
 }
 
 header {
     position:sticky !important;
     top:0 !important;
     z-index:999 !important;
+    box-shadow:0 0.3rem 0.6rem rgba(0, 0, 0, 0.05);
 }
 
 h1 {
-    font-size:2.5rem !important;
+    position:relative !important;
+    font-size:2.8rem !important;
+    z-index:5 !important;
+}
+
+.oisii {
+    color:tomato !important;
 }
 
 h2 {
-    font-size:2rem !important;
+    color:white !important;
+    background-color:tomato !important;
+    margin-top:0.8rem !important;
+    padding:0.1em 0.5em 0.5rem 0.8rem!important;
+    display:inline-block !important;
+    line-height:2.5rem !important;
+    font-size:2.2rem !important;
+    border-radius:2.5rem 0rem 0rem 2.5rem !important;
+}
+
+h2:before {
+    content:'●' !important;
+    color:white !important;
+    margin-right :1rem !important;
+}
+
+.woman {
+    display:inline-block !important;
+    position:absolute !important;
+    overflow:hidden !important;
+    transform:translate(-50%, -42%) !important;
+    left:50% !important;
+    width:100% !important;
+    height:auto !important;
+    z-index:1 !important;
+    opacity:0.7 !important;
 }
 
 .subtitle {
-    font-size:1.3rem;
+    font-weight:500 !important;
+    color:tomato !important;
+    font-size:1.3rem !important;
+}
+
+.box {
+    text-shadow:0.15rem 0.11rem 0.2rem white !important;
+    position: relative !important; top:15rem !important;
+    padding:0.5em 1.5em !important;
+    border-top:solid 0.1rem black!important;
+    border-bottom:solid 0.1rem black !important;
+    z-index:5 !important;
+}
+
+.box:before, .box:after {
+    content:'' !important;
+    position:absolute !important;
+    top:-0.6rem !important;
+    width:0.085rem !important;
+    height:-webkit-calc(100% + 1.1rem) !important;
+    height:calc(100% + 1.1rem);
+    background-color:black !important;
+}
+
+.box:before 
+{
+    left:0.6rem !important;
+}
+
+.box:after {
+    right:0.6rem !important;
 }
 
 .card-color {
-    background-color:antiquewhite !important;
+    width:58rem !important;
+    height:18rem !important;
+    background-color:white !important;
+    border:solid tomato !important;
+    border-radius:0.2rem !important;
+}
+
+.comment-space {
+    height:10rem !important;
+    width:40rem !important;
+    word-break:break-all !important;
+}
+
+.title-space {
+    height:3rem !important;
+    width:12rem !important;
+}
+
+.my-tape {
+    width:30% !important;
+    height:2.5rem !important;
+    margin:-2.3rem auto 0 !important;
+    background-color:darkturquoise !important;
+    transform:rotate(-2deg) !important;
+    opacity:0.2 !important;
+}
+
+.others-tape {
+    width:30% !important;
+    height:2.5rem !important;
+    margin:-2.3rem auto 0 !important;
+    background-color:darkturquoise !important;
+    transform:rotate(-2deg) !important;
+    opacity:0.1 !important;
 }
 
 .navbar-brand {
+    font-weight:700 !important;
     font-size:2.2rem !important;
-    color:darkred !important;
+    color:tomato !important;
+}
+
+.navbar-brand:hover, .navbar-brand:active {
+    font-weight:700 !important;
+    font-size:2.2rem !important;
+    color:rgba(255,99,71,0.8) !important;
 }
 
 .nav-color {
-    color:darkred !important;
+    color:tomato !important;
+    text-decoration:none !important;
+}
+
+.nav-color:hover, .nav-color:active {
+    color:rgba(255,99,71,0.72) !important;
+    text-decoration:none !important;
+}
+
+.guide {
+    color:turquoise !important;
+    text-decoration:none !important;
+}
+
+.guide:hover, .guide:active {
+    color:rgba(64, 224, 208,0.7) !important;
+    text-decoration:none !important;
 }
 
 .navtab-color {
-    color:black;
+    font-size:1.2rem !important;
+    color:black !important;
 }
 
 .nav-size {
+    font-weight:500;
     font-size:1.2rem !important;
 }
 
-.negative {
-    color:sienna !important;
+.dropdown-color {
+    display:block !important;
+    height:1.8rem !important;
+    font-weight:500 !important;
+    color:black !important;
+    text-decoration:none !important;
+}
+
+.dropdown-color:hover, .dropdown-color:active {
+    display:block !important;
+    height:1.8rem !important;
+    font-weight:500 !important;
+    color:rgba(0, 0, 0,0.72) !important;
+    text-decoration:none !important;
+}
+
+.dropdown-item:hover, .dropdown-item:active {
     background-color:white !important;
 }
 
+.negative {
+    font-weight:500 !important;
+    color:tomato !important;
+    background-color:white !important;
+    border:solid tomato !important;
+    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+}
+
+.negative:hover {
+    font-weight:500 !important;
+    color:rgba(255,99,71,0.72) !important;
+    background-color:white !important;
+    border:solid rgba(255,99,71,0.72) !important;
+    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+}
+
+.negative:active {
+    font-weight:500 !important;
+    color:rgba(255,99,71,0.72) !important;
+    background-color:white !important;
+    border:solid rgba(255,99,71,0.72) !important;
+    transform:translateY(0.15rem) !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+.negative:focus {
+    font-weight:500 !important;
+    color:rgba(255,99,71,0.72) !important;
+    background-color:white !important;
+    border:solid rgba(255,99,71,0.72) !important;
+    box-shadow:none !important;
+}
+
 .positive {
+    font-weight:500 !important;
     color:white !important;
-    background-color:sienna !important;
+    background-color:tomato !important;
+    border:none !important;
+    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+}
+
+.positive:hover {
+    font-weight:500 !important;
+    color:white !important;
+    background-color:rgba(255,99,71,0.85) !important;
+    border:none !important;
+    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+}
+
+.positive:active {
+    font-weight:500 !important;
+    color:white !important;
+    background-color:rgba(255,99,71,0.85) !important;
+    border:none !important;
+    transform:translateY(0.15rem) !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+.positive:focus {
+    font-weight:500 !important;
+    color:white !important;
+    background-color:rgba(255,99,71,0.85) !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+.lead:link, .lead:visited {
+    font-weight:500 !important;
+    font-size:1.4rem !important;
+    color:white !important;
+    background-color:turquoise !important;
+    border:none !important;
+    text-shadow:none !important;
+    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+}
+
+.lead:hover {
+    font-weight:500 !important;
+    color:white !important;
+    background-color:rgba(64, 224, 208,0.82) !important;
+    border:none !important;
+    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+}
+
+.lead:active {
+    font-weight:500 !important;
+    color:white !important;
+    background-color:rgba(64, 224, 208,0.82) !important;
+    border:none !important;
+    transform:translateY(0.15rem) !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+.lead:focus {
+    font-weight:500 !important;
+    color:white !important;
+    background-color:rgba(64, 224, 208,0.82) !important;
+    border:none !important;
+    box-shadow:none !important;
 }
 
 .needed {
     color:white !important;
-    background-color:rosybrown !important;
+    background-color:turquoise !important;
+}
+
+.form-control {
+    border-color:darkgray !important;
+}
+
+.form-control:focus {
+    border-color:darkgray !important;
+    box-shadow: 0 0 0 0.15rem rgba(255,99,71,0.75) !important;
 }
 
 .btn-rem-6 {
@@ -77,9 +329,26 @@ h2 {
 }
 
 .btn-rem-13 {
-    width:13rem !important;
+    height:3.1rem !important;
+    width:15.5rem !important;
 }
 
+.follow {
+    text-align:center !important;
+}
+
+.error {
+    color:black !important;
+    background-color:white !important;
+    border:none !important;
+    list-style:none !important;
+}
+
+.icon {
+    color:turquoise !important;
+    position:relative !important;
+    
+}
 
 
 

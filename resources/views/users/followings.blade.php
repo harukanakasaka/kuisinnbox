@@ -5,7 +5,7 @@
         <aside class="col-sm-4">
             @include('users.card', ['user' => $user])
         </aside>
-        <div class="col-sm-8 offset-2">
+        <div class="col-sm-10 offset-1">
             @include('users.navtabs', ['user' => $user])
             @include('users.users', ['users' => $users])
         </div>

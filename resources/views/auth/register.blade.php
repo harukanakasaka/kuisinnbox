@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="text-center">
-        <h2>登録</h2>
-    </div>
+    
+        <h2 class="mb-3">登録</h2>
     
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
@@ -34,7 +33,7 @@
                 </div>
             {!! Form::close() !!}
             
-            <p class="mt-2">登録済みの方は{!! link_to_route('login', 'こちら', [], ['class' => 'nav-color']) !!}</p>
+            <p class="mt-2">登録済みの方は{!! link_to_route('login', 'こちら', [], ['class' => 'guide']) !!}</p>
         </div>
     </div>
 @endsection    

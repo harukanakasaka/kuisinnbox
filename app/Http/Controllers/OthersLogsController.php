@@ -14,7 +14,7 @@ class OthersLogsController extends Controller
             $logs = Log::orderBy('id', 'desc')->paginate(10);
     
             return view('all_welcome', [
-                'logs' => $logs
+                'logs' => $logs,
             ]);
         }
     }    
