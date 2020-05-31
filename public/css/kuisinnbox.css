@@ -101,16 +101,13 @@ h2:before {
 }
 
 .card-color {
-    width:58rem !important;
-    height:19rem !important;
     background-color:white !important;
     border:solid tomato !important;
     border-radius:0.2rem !important;
 }
 
 .comment-space {
-    padding-top:1rem !important;
-    height:7rem !important;
+    height:3rem !important;
     width:40rem !important;
     word-break:break-all !important;
 }
@@ -125,12 +122,13 @@ h2:before {
     height:1rem !important;
     width:12rem !important;
     margin-top:1rem !important;
+    margin-bottom:1.5rem !important;
 }
 
 .post {
-    margin-top:2rem !important;
+    margin-top:6rem !important;
     margin-bottom:0rem !important;
-    padding-top:2rem !important;
+    padding-top:1rem !important;
 }
 
 .card-button {
@@ -235,7 +233,7 @@ h2:before {
     color:tomato !important;
     background-color:white !important;
     border:solid tomato !important;
-    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+    box-shadow:inset 0 -0.18rem 0.05rem rgba(0, 0, 0, 0.18) !important;
 }
 
 .negative:hover {
@@ -243,7 +241,7 @@ h2:before {
     color:rgba(255,99,71,0.72) !important;
     background-color:white !important;
     border:solid rgba(255,99,71,0.72) !important;
-    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+    box-shadow:inset 0 -0.18rem 0.05rem rgba(0, 0, 0, 0.18) !important;
 }
 
 .negative:active {
@@ -269,7 +267,7 @@ h2:before {
     color:white !important;
     background-color:tomato !important;
     border:none !important;
-    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+    box-shadow:inset 0 -0.18rem 0.05rem rgba(0, 0, 0, 0.25) !important;
 }
 
 .positive:hover {
@@ -277,7 +275,7 @@ h2:before {
     color:white !important;
     background-color:rgba(255,99,71,0.85) !important;
     border:none !important;
-    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+    box-shadow:inset 0 -0.18rem 0.05rem rgba(0, 0, 0, 0.25) !important;
 }
 
 .positive:active {
@@ -305,7 +303,7 @@ h2:before {
     background-color:turquoise !important;
     border:none !important;
     text-shadow:none !important;
-    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+    box-shadow:inset 0 -0.18rem 0.05rem rgba(0, 0, 0, 0.25) !important;
 }
 
 .lead:hover {
@@ -313,7 +311,7 @@ h2:before {
     color:white !important;
     background-color:rgba(64, 224, 208,0.82) !important;
     border:none !important;
-    box-shadow:0 0.13rem 0.13rem rgba(0, 0, 0, 0.25) !important;
+    box-shadow:inset 0 -0.18rem 0.05rem rgba(0, 0, 0, 0.25) !important;
 }
 
 .lead:active {
@@ -365,10 +363,6 @@ h2:before {
     width:15.5rem !important;
 }
 
-.follow {
-    text-align:center !important;
-}
-
 .error {
     color:black !important;
     background-color:white !important;
@@ -380,6 +374,60 @@ h2:before {
     color:turquoise !important;
     position:relative !important;
     
+}
+
+.photo {
+    border:solid 0.1rem darkgray !important;
+    margin-left:11.6rem !important;
+}
+
+.current-photo {
+    margin-right:3rem !important;
+}
+
+.pagination {
+    text-align:center !important;
+}
+
+.pagination li {
+    display:inline-block !important;
+}
+
+.page-link:link ,.page-link:visited {
+    color:white !important;
+    background-color:turquoise !important;
+    border:solid turquoise !important;
+    border-radius:1.2rem !important;
+    margin-left:0.1rem !important;
+    margin-right:0.1rem !important;
+}
+
+.page-link:hover, .page-link:active, .page-link:disabled, .page-link:focus {
+    color:white !important;
+    background-color:rgba(64, 224, 208,0.82) !important;
+    border:solid turquoise !important;
+    box-shadow:none !important;
+    border-radius:1.2rem !important;
+    margin-left:0.1rem !important;
+    margin-right:0.1rem !important;
+}
+
+.page-item.active .page-link {
+    color:turquoise !important;
+    background-color:white !important;
+    border:solid turquoise !important;
+    border-radius:1.2rem !important;
+    margin-left:0.1rem !important;
+    margin-right:0.1rem !important;
+}
+
+.page-item.disabled .page-link {
+    color:white !important;
+    background-color:turquoise !important;
+    border:solid turquoise !important;
+    border-radius:1.2rem !important;
+    margin-left:0.1rem !important;
+    margin-right:0.1rem !important;
 }
 
 

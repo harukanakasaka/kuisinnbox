@@ -17,7 +17,7 @@
             <div class="media-left">
                 <p class="title-space mt-3 mb-1">{{ $log->product_name }}</p>
                 @if ($log->myfile)
-                            <img src="{{ $log->myfile }}" width="190rem" height="190rem">
+                            <img src="{{ $log->myfile }}" width="190rem" height="200rem">
                             @endif
             </div>
             <div class="media-body ml-5">

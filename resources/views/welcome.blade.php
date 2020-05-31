@@ -25,9 +25,6 @@
                         
                         {!! Form::file('myfile', old('myfile')) !!}
                         
-                        @if ('myfile')
-                            <img src="{{ 'myfile' }}" width="190rem" height="190rem">
-                        @endif
                     </div>
                     
                     <div class="form-group">
@@ -46,7 +43,7 @@
                         <div class="media-left">
                             <p class="title-space mt-3 mb-1">{{ $log->product_name }}</p>
                             @if ($log->myfile)
-                            <img src="{{ $log->myfile }}" width="190rem" height="190rem">
+                            <img src="{{ $log->myfile }}" width="190rem" height="200rem">
                             @endif
                         </div>
                         <div class="media-body ml-5">
@@ -79,7 +76,7 @@
         </div>
     @else
             <div>
-                <img src="https://images.unsplash.com/photo-1518912006-3761723e528a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="画像" class="woman"/>
+                <img src="https://images.unsplash.com/photo-1518912006-3761723e528a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="サンドイッチを食べる女性" class="woman"/>
             </div>
             <div class="text-center mt-5">    
                 <h1 class="box">あなたの知らない<span class="oisii">おいしい</span>を見つけよう<br>

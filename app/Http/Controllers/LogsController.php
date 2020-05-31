@@ -32,12 +32,16 @@ class LogsController extends Controller
             'product_name' => 'required|max:20',
             'title' => 'required|max:20',
             'comment' => 'required|max:191',
-            'myfile' => 'required|image',
+            'myfile' => 'nullable|image',
         ]);
         
+        if($request->file('myfile')){
         $image = $request->file('myfile');
         $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
         $url = Storage::disk('s3')->url($path);
+        } else {
+            $url = null;
+        }
         
         $request->user()->logs()->create([
             'product_name' => $request->product_name,
@@ -56,7 +60,7 @@ class LogsController extends Controller
         if(\Auth::id() == $log->user_id){
             return view('users.edit', [
                 'log' => $log,
-            ])->with(['defaultName' => 'myfile']);
+            ]);
         } else {
             return redirect('/');
         }
@@ -68,7 +72,7 @@ class LogsController extends Controller
             'product_name' => 'required|max:20',
             'title' => 'required|max:20',
             'comment' => 'required|max:191',
-            'myfile' => 'required|image',
+            'myfile' => 'nullable|image',
         ]);
         
         $log = Log::find($id);
@@ -79,11 +83,16 @@ class LogsController extends Controller
             $log->comment = $request->comment;
             
             $url = Storage::disk('s3')->url($log->id);
-            Storage::delete($url);
-            $image = $request->file('myfile');
-            $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
-            $url = Storage::disk('s3')->url($path);
-            $log->myfile = $url;
+            
+            if($request->file('myfile')){
+                Storage::delete($url);
+                $image = $request->file('myfile');
+                $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+                $url = Storage::disk('s3')->url($path);
+                $log->myfile = $url;
+            } else {
+                $url = $log->myfile;
+            }
             
             $log->save();
             return redirect('/');

@@ -23,8 +23,12 @@
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('myfile', 'フォト') !!}
-                    {!! Form::file('myfile', old('myfile', isset($defaultName) ? $defaultName : '')) !!}
+                    {!! Form::label('myfile', 'フォト') !!}<br>
+                    {!! Form::file('myfile', null) !!}
+                    @if ($log->myfile)
+                        <img src="{{ $log->myfile }}" width="190rem" height="200rem" class="photo">
+                        <p class="current-photo text-right">現在のフォト</p>
+                    @endif
                 </div>
             
                 <div class="form-group">

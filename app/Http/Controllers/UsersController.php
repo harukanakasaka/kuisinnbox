@@ -30,7 +30,6 @@ class UsersController extends Controller
     {
         $user = User::find($id);
         $followings = $user->followings()->paginate(10);
-        //$logs = $user->logs()->orderBy('created_at', 'desc')->paginate(10);
         
         $data = [
             'user' => $user,
