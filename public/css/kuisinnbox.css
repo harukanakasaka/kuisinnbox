@@ -60,8 +60,8 @@ h2:before {
     overflow:hidden !important;
     transform:translate(-50%, -42%) !important;
     left:50% !important;
-    width:100% !important;
-    height:auto !important;
+    width:auto !important;
+    height:275% !important;
     z-index:1 !important;
     opacity:0.7 !important;
 }
@@ -116,8 +116,9 @@ h2:before {
 }
 
 .title-space {
-    height:3rem !important;
     width:12rem !important;
+    margin-bottom:1.5rem !important;
+    border-bottom:dashed 0.1rem tomato !important;
 }
 
 .title {
@@ -140,7 +141,7 @@ h2:before {
 
 .my-tape {
     position:relative !important; top:0.9rem !important;
-    width:30% !important;
+    width:28% !important;
     height:2.5rem !important;
     margin:-3.5rem auto 0 !important;
     background-color:darkturquoise !important;
@@ -150,7 +151,7 @@ h2:before {
 
 .others-tape {
     position:relative !important; top:0.9rem !important;
-    width:30% !important;
+    width:28% !important;
     height:2.5rem !important;
     margin:-3.5rem auto 0 !important;
     background-color:darkturquoise !important;

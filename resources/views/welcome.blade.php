@@ -19,9 +19,15 @@
                         {!! Form::label('comment', 'コメント') !!}<span class="badge badge-pill needed">必須</span>
                         {!! Form::textarea('comment', old('comment'), ['class' => 'form-control', 'row' => '2']) !!}
                     </div>  
+                    
                     <div class="form-group">
                         {!! Form::label('myfile', 'フォト') !!}<br>
+                        
                         {!! Form::file('myfile', old('myfile')) !!}
+                        
+                        @if ('myfile')
+                            <img src="{{ 'myfile' }}" width="190rem" height="190rem">
+                        @endif
                     </div>
                     
                     <div class="form-group">

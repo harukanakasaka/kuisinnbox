@@ -24,7 +24,7 @@
                 
                 <div class="form-group">
                     {!! Form::label('myfile', 'フォト') !!}
-                    {!! Form::file('myfile', old('myfile')) !!}
+                    {!! Form::file('myfile', old('myfile', isset($defaultName) ? $defaultName : '')) !!}
                 </div>
             
                 <div class="form-group">

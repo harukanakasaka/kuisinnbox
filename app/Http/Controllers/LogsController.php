@@ -56,7 +56,7 @@ class LogsController extends Controller
         if(\Auth::id() == $log->user_id){
             return view('users.edit', [
                 'log' => $log,
-            ]);
+            ])->with(['defaultName' => 'myfile']);
         } else {
             return redirect('/');
         }
