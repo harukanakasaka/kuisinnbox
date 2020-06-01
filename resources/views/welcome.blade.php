@@ -3,8 +3,8 @@
 @section('content')
     @if(Auth::check())
         <h2 class="mb-4">{{ Auth::user()->name }}のログ</h2>
-        <div class="row">
-            <div class="col-sm-8 offset-2">
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
                 @if (Auth::id() == $user->id)
                 {!! Form::open(['route' => 'logs.store', 'method' => 'post', 'class' => 'form', 'files' => true]) !!}
                     <div class="form-group">

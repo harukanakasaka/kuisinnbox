@@ -6,8 +6,8 @@
                 <h2 class="mb-4">みんなのログ</h2>
                     <ul class="list-unstyled">
     @foreach ($logs as $log)
-    <div class="row">
-    <div class="card my-4 pt-3 pb-1 px-4 col-sm-10 offset-1 card-color">
+    <div class="row justify-content-center">
+    <div class="card my-4 pt-3 pb-1 px-4 col-sm-10 card-color">
         @if (Auth::user() == $log->user)
         <div class="my-tape"></div>
         @else
