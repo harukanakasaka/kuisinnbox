@@ -54,16 +54,32 @@ h2:before {
     margin-right :1rem !important;
 }
 
-.woman {
-    display:inline-block !important;
-    position:absolute !important;
-    overflow:hidden !important;
-    transform:translate(-50%, -42%) !important;
-    left:50% !important;
-    width:auto !important;
-    height:275% !important;
-    z-index:1 !important;
-    opacity:0.7 !important;
+@media screen and (min-width:768px) {
+    .woman {
+        display:inline-block !important;
+        position:absolute !important;
+        overflow:hidden !important;
+        transform:translate(-50%, -42%) !important;
+        left:50% !important;
+        width:auto !important;
+        height:275% !important;
+        z-index:1 !important;
+        opacity:0.7 !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .woman {
+        display:inline-block !important;
+        position:absolute !important;
+        overflow:hidden !important;
+        transform:translate(-48%, -40%) !important;
+        left:50% !important;
+        width:280% !important;
+        height:auto !important;
+        z-index:1 !important;
+        opacity:0.7 !important;
+    }
 }
 
 .subtitle {
@@ -72,13 +88,27 @@ h2:before {
     font-size:1.3rem !important;
 }
 
-.box {
-    text-shadow:0.15rem 0.11rem 0.2rem white !important;
-    position: relative !important; top:15rem !important;
-    padding:0.5em 1.5em !important;
-    border-top:solid 0.1rem black!important;
-    border-bottom:solid 0.1rem black !important;
-    z-index:5 !important;
+@media screen and (min-width:768px) {
+    .box {
+        text-shadow:0.15rem 0.11rem 0.2rem white !important;
+        position: relative !important; top:15rem !important;
+        padding:0.5em 1.5em !important;
+        border-top:solid 0.1rem black!important;
+        border-bottom:solid 0.1rem black !important;
+        z-index:5 !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .box {
+        font-size:1.66rem !important;
+        text-shadow:0.15rem 0.11rem 0.2rem white !important;
+        position: relative !important; top:15rem !important;
+        padding:0.4em 1.3em !important;
+        border-top:solid 0.1rem black!important;
+        border-bottom:solid 0.1rem black !important;
+        z-index:5 !important;
+    }
 }
 
 .box:before, .box:after {
@@ -98,6 +128,12 @@ h2:before {
 
 .box:after {
     right:0.6rem !important;
+}
+
+@media screen and (min-width:768px) {
+    .break {
+        display:none !important;
+    }
 }
 
 .card-color {

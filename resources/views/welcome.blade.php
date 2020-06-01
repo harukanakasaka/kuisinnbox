@@ -79,7 +79,7 @@
                 <img src="https://images.unsplash.com/photo-1518912006-3761723e528a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="サンドイッチを食べる女性" class="woman"/>
             </div>
             <div class="text-center mt-5">    
-                <h1 class="box">あなたの知らない<span class="oisii">おいしい</span>を見つけよう<br>
+                <h1 class="box col-sm-12">あなたの知らない<br class="break"><span class="oisii">おいしい</span>を見つけよう<br>
                 {!! link_to_route('signup.get', '▶今すぐはじめる', [], ['class' => 'btn btn-lg light rounded-pill mt-2 mb-1 btn-rem-13 lead']) !!}
                 </h1>
             </div>
