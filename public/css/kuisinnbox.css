@@ -131,75 +131,202 @@ h2:before {
 }
 
 @media screen and (min-width:768px) {
-    .break {
+    .break1 {
         display:none !important;
     }
 }
 
-.card-color {
-    background-color:white !important;
-    border:solid tomato !important;
-    border-radius:0.2rem !important;
+@media screen and (min-width:768px) {
+    .contents {
+        width:80% !important;
+        margin:0 auto !important;
+   }
+
+    .card-color {
+        margin-top:3rem !important;
+        margin-bottom:4rem !important;
+        background-color:white !important;
+        border:solid tomato !important;
+        border-radius:0.2rem !important;
+    }
+
+    .flexbox { 
+        display:flex !important;
+        height:20rem !important;
+    }
+
+    .product-space {
+        position:absolute !important; top:1.8rem !important; left:2rem !important;
+        width:39% !important;
+        border-bottom:dashed 0.1rem turquoise !important;
+    }
+
+    .card-img {
+        position:absolute !important; top:3.5rem !important; left:2.4rem !important;
+        width:20% !important;
+    }
+
+    .no-img {
+        position:absolute !important; top:5rem !important; left:2.71rem !important;
+        font-size:0.8rem !important;
+        font-weight:400 !important;
+        padding:5rem 1rem !important;
+        border:solid darkgray 0.06rem !important;
+    }
+
+    .title {
+        position:absolute !important; top:1.8rem !important; left:27rem !important;
+        width:39% !important;
+        border-bottom:dashed 0.1rem turquoise !important;
+   }
+
+    .comment-space {
+        position:absolute !important; top:4.8rem !important; left:15rem !important;
+        width:70% !important;
+        word-break:break-all !important;
+    }
+
+    .post {
+        position:absolute !important; top:14.8rem !important; left:15rem !important;
+        }
+        
+    .break2 {
+        display:none !important;
+    }        
+
+    .card-button {
+        position:absolute !important; top:16.5rem !important; right:2rem !important;
+        }
+
+    .box1 {
+        width:30% !important;
+        margin:auto !important;
+    }
+
+    .box2 {
+        width:70% !important;
+        margin:auto !important;
+    }
+
+    .my-tape {
+        position:absolute !important; top:2rem !important; left:20rem !important;
+        width:28% !important;
+        height:2.5rem !important;
+        margin:-3.5rem auto 0 !important;
+        background-color:darkturquoise !important;
+        transform:rotate(-2deg) !important;
+        opacity:0.2 !important;
+    }
+
+    .others-tape {
+        position:absolute !important; top:2rem !important; left:20rem !important;
+        width:28% !important;
+        height:2.5rem !important;
+        margin:-3.5rem auto 0 !important;
+        background-color:darkturquoise !important;
+        transform:rotate(-2deg) !important;
+        opacity:0.1 !important;
+    }
+
+    .others-tape-2 {
+        position:absolute !important; top:0.9rem !important; left:20rem !important;
+        width:28% !important;
+        height:2.5rem !important;
+        margin:-2.3rem auto 0 !important;
+        background-color:darkturquoise !important;
+        transform:rotate(-2deg) !important;
+        opacity:0.1 !important;
+    }
 }
 
-.comment-space {
-    height:3rem !important;
-    width:40rem !important;
-    word-break:break-all !important;
-}
+@media screen and (max-width:768px) {
+    .contents {
+        width:100% !important;
+        margin:0 auto !important;
+   }
 
-.title-space {
-    width:12rem !important;
-    margin-bottom:1.5rem !important;
-    border-bottom:dashed 0.1rem tomato !important;
-}
+    .card-color {
+        margin-top:3rem !important;
+        margin-bottom:4rem !important;
+        background-color:white !important;
+        border:solid tomato !important;
+        border-radius:0.2rem !important;
+    }
+    
+    .product-space {
+        position:absolute !important; top:1.6rem !important; left:8.5rem !important;
+        width:55% !important;
+        border-bottom:dashed 0.1rem turquoise !important;
+    }
+    
+    .card-img {
+        position:absolute !important; top:2rem !important; left:1.5rem !important;
+        width:25% !important;
+    }
+    
+    .no-img {
+        position:absolute !important; top:2rem !important; left:1.5rem !important;
+        font-size:0.6rem !important;
+        font-weight:400 !important;
+        padding:3rem 0.1rem !important;
+        border:solid darkgray 0.06rem !important;
+    }
+    
+    .title {
+        position:absolute !important; top:5.5rem !important; left:8.5rem !important;
+        width:55% !important;
+        border-bottom:dashed 0.1rem turquoise !important;
+   }
+   
+    .comment-space {
+        width:90% !important;
+        margin-top:10rem !important;
+        margin-left:1.3rem !important;
+        word-break:break-all !important;
+    }
 
-.title {
-    height:1rem !important;
-    width:12rem !important;
-    margin-top:1rem !important;
-    margin-bottom:1.5rem !important;
-}
+    .post {
+        position:absolute !important;
+        font-size:0.6rem !important;
+        margin-left:1.5rem !important;
+        }
 
-.post {
-    margin-top:6rem !important;
-    margin-bottom:0rem !important;
-    padding-top:1rem !important;
-}
+    .card-button {
+        float:right !important;
+        margin-top:2.5rem !important;
+        margin-right:0.5rem !important;
+        margin-bottom:0.5rem !important;
+        }
+        
+    .my-tape {
+        position:absolute !important; top:2rem !important; left:5.4rem !important;
+        width:50% !important;
+        height:2.2rem !important;
+        margin:-3.3rem auto 0 !important;
+        background-color:darkturquoise !important;
+        transform:rotate(-2deg) !important;
+        opacity:0.2 !important;
+    }
 
-.card-button {
-    margin-top:0rem !important;
-    padding-bottom:0rem !important;
-    margin-bottom:0rem !important;
-}
+    .others-tape {
+        position:absolute !important; top:2rem !important; left:5.4rem !important;
+        width:50% !important;
+        height:2.2rem !important;
+        margin:-3.3rem auto 0 !important;
+        background-color:darkturquoise !important;
+        transform:rotate(-2deg) !important;
+        opacity:0.1 !important;
+    }
 
-.my-tape {
-    position:relative !important; top:0.9rem !important;
-    width:28% !important;
-    height:2.5rem !important;
-    margin:-3.5rem auto 0 !important;
-    background-color:darkturquoise !important;
-    transform:rotate(-2deg) !important;
-    opacity:0.2 !important;
-}
-
-.others-tape {
-    position:relative !important; top:0.9rem !important;
-    width:28% !important;
-    height:2.5rem !important;
-    margin:-3.5rem auto 0 !important;
-    background-color:darkturquoise !important;
-    transform:rotate(-2deg) !important;
-    opacity:0.1 !important;
-}
-
-.others-tape-2 {
-    width:30% !important;
-    height:2.5rem !important;
-    margin:-2.3rem auto 0 !important;
-    background-color:darkturquoise !important;
-    transform:rotate(-2deg) !important;
-    opacity:0.1 !important;
+    .others-tape-2 {
+        position:absolute !important; top:2rem !important; left:5.4rem !important;
+        width:50% !important;
+        height:2.2rem !important;
+        margin:-3.3rem auto 0 !important;
+        background-color:darkturquoise !important;
+        transform:rotate(-2deg) !important;
+        opacity:0.1 !important;
+    }    
 }
 
 .navbar-brand {
