@@ -722,7 +722,7 @@ h1 {
 
 .card-positive:hover, .card-positive:active, .card-positive:focus {
     font-weight:500 !important;
-    color:white !important;
+    color:papayawhip !important;
     background-color:transparent !important;
     box-shadow:none !important;
     border:solid rgba(0,0,0,0.62) !important;
@@ -730,7 +730,6 @@ h1 {
 
 .card-positive:hover::before, .card-positive:active::before, .card-positive:focus::before {
     font-weight:500 !important;
-    color:white !important;
     background-color:rgba(255,99,71,0.85) !important;
     box-shadow:none !important;
 }
