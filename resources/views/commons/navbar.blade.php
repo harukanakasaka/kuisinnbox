@@ -11,9 +11,9 @@
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav inline-block">
                 @if (Auth::check())
-                    <li class="nav-item nav-size mt-2">{!! link_to_route('all_welcome.index', 'みんなのログ', [], ['class' => 'mr-4 nav-color']) !!}</li>
+                    <li class="nav-item nav-size mt-4">{!! link_to_route('all_welcome.index', 'みんなのログ', [], ['class' => 'mr-4 nav-color']) !!}</li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle nav-color" data-toggle="dropdown">{{ Auth::user()->name }}</a>
+                        <a href="#" class="nav-link dropdown-toggle nav-color mt-3" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li class="dropdown-item px-3 pt-0 pb-1">{!! link_to_route('welcome.index', 'ログを書く', [], ['class' => 'dropdown-color text-left']) !!}</li>
                             <li class="dropdown-item px-3 pt-0 pb-1">{!! link_to_route('users.show', Auth::user()->name . 'の詳細', ['id' => Auth::id()], ['class' => 'dropdown-color text-left']) !!}</li>
