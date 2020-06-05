@@ -3,8 +3,8 @@
 @section('content')
 
     <h2 class="mb-4">編集</h2>
-    <div class="row">
-        <div class="col-8 offset-2">
+    <div class="row justify-content-center">
+        <div class="col-sm-8">
             {!! Form::model($log, ['route' => ['logs.update', $log->id], 'method' => 'put', 'class' => 'form', 'files' => true]) !!}
             
                 <div class="form-group">
@@ -24,15 +24,19 @@
                 
                 <div class="form-group">
                     {!! Form::label('myfile', 'フォト') !!}<br>
+                    <div class="photo-file">
                     {!! Form::file('myfile', null) !!}
+                    </div>
                     @if ($log->myfile)
-                        <img src="{{ $log->myfile }}" width="190rem" height="200rem" class="photo">
+                        <img src="{{ $log->myfile }}" class="photo">
                         <p class="current-photo text-right">現在のフォト</p>
+                    @else
+                        <div class="no-img2">フォトはありません</div>    
                     @endif
                 </div>
             
                 <div class="form-group">
-                {!! Form::submit('更新', ['class' => 'btn btn-light rounded-pill btn-rem-7 positive']) !!}
+                {!! Form::submit('更新', ['class' => 'btn btn-light rounded-pill btn-rem-7 update-btn positive']) !!}
                 </div>
             {!! Form::close() !!}    
                 

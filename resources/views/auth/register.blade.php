@@ -19,7 +19,7 @@
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('password', 'パスワード') !!}<span class="badge badge-pill needed">必須</span>
+                    {!! Form::label('password', 'パスワード') !!}（6文字以上）<span class="badge badge-pill needed">必須</span>
                     {!! Form::password('password', ['class' => 'form-control']) !!}
                 </div>
                 

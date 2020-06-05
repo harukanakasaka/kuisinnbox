@@ -33,16 +33,16 @@
                 </div>
                     
                 <div>
-                    <p class="post">{{ $log->user->name }}<br class="break2"><span class="text-muted">{{ $log->created_at }}に投稿</span></p>
+                    <div class="name">{{ $log->user->name }}</div><br><span class="text-muted post">{{ $log->created_at }}に投稿</span>
                     <div class="form-inline card-button">   
                         @if (Auth::id() == $log->user_id)
                             {!! Form::open(['route' => ['logs.destroy', $log->id], 'method' => 'delete']) !!}
-                                {!! Form::submit('削除', ['class' => 'btn btn-light rounded-pill btn-rem-6 mr-2 negative']) !!}
+                                {!! Form::submit('削除', ['class' => 'btn btn-light rounded-pill btn-rem-6 mr-2 card-negative']) !!}
                             {!! Form::close() !!}
-                            {!! link_to_route('logs.edit', '編集', ['id' => $log->id], ['class' => 'btn btn-light rounded-pill btn-rem-6 positive']) !!}
+                            {!! link_to_route('logs.edit', '編集', ['id' => $log->id], ['class' => 'btn btn-light rounded-pill btn-rem-6 card-positive']) !!}
                         @else
                             @include('user_follow.follow_button', ['user' => $log->user])
-                            {!! link_to_route('users.show', 'もっとログを見る', ['id' => $log->user->id], ['class' => 'btn btn-light rounded-pill btn-rem-10 positive']) !!}
+                            {!! link_to_route('users.show', 'もっとログを見る', ['id' => $log->user->id], ['class' => 'btn btn-light rounded-pill btn-rem-10 card-positive']) !!}
                         @endif
                     </div>     
                 </div>
