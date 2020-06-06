@@ -24,8 +24,8 @@
                     </li>
                 
                 @else
-                    <li class="nav-item">{!! link_to_route('signup.get', '登録', [], ['class' => 'mr-4 nav-link nav-size nav-color']) !!}</li>
-                    <li class="nav-item">{!! link_to_route('login', 'ログイン', [], ['class' => 'nav-link nav-size nav-color']) !!}</li>
+                    <li class="nav-item mt-3">{!! link_to_route('signup.get', '登録', [], ['class' => 'mr-4 nav-link nav-size nav-color']) !!}</li>
+                    <li class="nav-item mt-3">{!! link_to_route('login', 'ログイン', [], ['class' => 'nav-link nav-size nav-color']) !!}</li>
                 @endif
             </ul>
         </div>

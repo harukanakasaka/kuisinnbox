@@ -1,5 +1,6 @@
-<h2 class="mb-4"><span class="long2">{{ $user->name }}</span></h2>
+<h2 class="mb-5"><span class="long2">{{ $user->name }}</span></h2>
 
+<div class="navtab-follow">
 @if (Auth::id() != $user->id)
     @if (Auth::user()->is_following($user->id))
         {!! Form::open(['route' => ['user.unfollow', $user->id], 'method' => 'delete']) !!}
@@ -11,3 +12,4 @@
         {!! Form::close() !!}
     @endif
 @endif
+</div>
