@@ -18,12 +18,12 @@
                     {!! Form::password('password', ['class' => 'form-control']) !!}
                 </div>
                 
-                <div class="text-center">
+                <div class="text-left mt-4">
                     {!! Form::submit('ログイン', ['class' => 'btn btn-light rounded-pill btn-rem-7 positive']) !!}
                 </div>
             {!! Form::close() !!}
             
-            <p class="mt-2">はじめての方は{!! link_to_route('signup.get', 'こちら', [], ['class' => 'guide']) !!}</p>
+            <p class="text-right guide-space">はじめての方は{!! link_to_route('signup.get', 'こちら', [], ['class' => 'guide']) !!}</p>
         </div>
     </div>
 @endsection

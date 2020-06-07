@@ -28,12 +28,12 @@
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
                 
-                <div class="text-center">
+                <div class="text-left mt-4">
                     {!! Form::submit('登録', ['class' => 'btn btn-light rounded-pill btn-rem-7 positive']) !!}
                 </div>
             {!! Form::close() !!}
             
-            <p class="mt-2">登録済みの方は{!! link_to_route('login', 'こちら', [], ['class' => 'guide']) !!}</p>
+            <p class="text-right guide-space">登録済みの方は{!! link_to_route('login', 'こちら', [], ['class' => 'guide']) !!}</p>
         </div>
     </div>
 @endsection    
