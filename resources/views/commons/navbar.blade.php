@@ -1,5 +1,5 @@
 <header class="mb-4">
-    <nav class="navbar navbar-expand-sm navbar-light" style="background-color:white;">
+    <nav class="navbar navbar-expand-sm navbar-light navbar-space" style="background-color:white;">
         <a class="navbar-brand" href="/"><i class="fas fa-utensils mr-2"></i>くいしんぼっくす</a>
         <p class="subtitle"><br>あ、おいしいと思った商品を共有</p>
         
@@ -11,9 +11,9 @@
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav inline-block">
                 @if (Auth::check())
-                    <li class="nav-item nav-size mt-4">{!! link_to_route('all_welcome.index', 'みんなのログ', [], ['class' => 'mr-4 nav-color']) !!}</li>
+                    <li class="nav-item nav-size mt-2">{!! link_to_route('all_welcome.index', 'みんなのログ', [], ['class' => 'mr-4 nav-color ours']) !!}</li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle nav-color mt-3" data-toggle="dropdown">{{ Auth::user()->name }}</a>
+                        <a href="#" class="nav-link dropdown-toggle nav-color mt-1" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li class="dropdown-item px-3 pt-0 pb-1">{!! link_to_route('welcome.index', 'ログを書く', [], ['class' => 'dropdown-color text-left']) !!}</li>
                             <li class="dropdown-item px-3 pt-0 pb-1">{!! link_to_route('users.show', Auth::user()->name . 'の詳細', ['id' => Auth::id()], ['class' => 'dropdown-color text-left']) !!}</li>
@@ -24,8 +24,8 @@
                     </li>
                 
                 @else
-                    <li class="nav-item mt-3">{!! link_to_route('signup.get', '登録', [], ['class' => 'mr-4 nav-link nav-size nav-color']) !!}</li>
-                    <li class="nav-item mt-3">{!! link_to_route('login', 'ログイン', [], ['class' => 'nav-link nav-size nav-color']) !!}</li>
+                    <li class="nav-item mt-1">{!! link_to_route('signup.get', '登録', [], ['class' => 'mr-4 nav-link nav-size nav-color']) !!}</li>
+                    <li class="nav-item mt-1">{!! link_to_route('login', 'ログイン', [], ['class' => 'nav-link nav-size nav-color']) !!}</li>
                 @endif
             </ul>
         </div>
