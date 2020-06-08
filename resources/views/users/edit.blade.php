@@ -8,17 +8,17 @@
             {!! Form::model($log, ['route' => ['logs.update', $log->id], 'method' => 'put', 'class' => 'form', 'files' => true]) !!}
             
                 <div class="form-group">
-                    {!! Form::label('product_name', '商品名') !!}
+                    {!! Form::label('product_name', '商品名') !!} <span class="badge badge-pill needed">必須</span>
                     {!! Form::text('product_name', null, ['class' => 'form-control']) !!}
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('title', 'タイトル') !!}
+                    {!! Form::label('title', 'タイトル') !!} <span class="badge badge-pill needed">必須</span>
                     {!! Form::text('title', null, ['class' => 'form-control']) !!}
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('comment', 'コメント') !!}
+                    {!! Form::label('comment', 'コメント') !!} <span class="badge badge-pill needed">必須</span>
                     {!! Form::textarea('comment', null, ['class' => 'form-control']) !!}
                 </div>
                 

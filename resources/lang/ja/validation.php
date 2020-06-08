@@ -104,7 +104,7 @@ return [
     */
 
     'attributes' => [
-        'name' => '名前',
+        'name' => 'ニックネーム',
         'email' => 'メールアドレス',
         'password' => 'パスワード',
         'product_name' => '商品名',

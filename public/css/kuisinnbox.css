@@ -19,6 +19,144 @@ body {
     -webkit-text-size-adjust:100% !important;
 }
 
+.section {
+    margin-top:auto !important;
+}
+
+footer {
+    margin-top:auto !important;
+    color:white !important;
+    background-color:tomato !important;
+    text-align:center !important;
+}
+
+@media screen and (min-width:768px) {                                           /*コンテンツ パソコン*/
+    .lead-icon {
+        position:absolute !important; top:28rem !important; left:34rem !important;
+        z-index:6 !important;
+    }
+    
+    .about-text {
+        font-size:2rem !important;
+        text-align:center !important;
+        margin-top:2rem !important;
+        margin-bottom:5rem !important;
+    }
+    
+    #wrapper {
+        display:flex !important;
+        flex-direction:column !important;
+        min-height:220vh !important;
+    }
+    
+    .usage {
+        display:flex !important;
+        justify-content:space-between !important;
+        text-align:center !important;
+        margin-top:3.5rem !important;
+        margin-bottom:3rem !important;
+    }
+    
+    .explanation-text {
+        font-size:1.6rem !important;
+    }
+    
+    .explanation {
+        font-size:1rem !important;
+    }
+    
+    .explanation-card {
+        width:32% !important;
+        padding-bottom:1rem !important;
+        background-image:url(http://free-paper-texture.com/p/p0027/p0027_s.jpg) !important;
+        background-size:cover !important;
+        border:solid black 0.11rem !important;
+        border-radius:0.2rem !important;
+        z-index:0 !important;
+    }
+    
+    .tape {
+        position:relative !important; bottom:0.7rem !important;
+        width:38% !important;
+        height:2.2rem !important;
+        margin:-0.5rem auto 0 !important;
+        background-color:turquoise !important;
+        transform:rotate(-2deg) !important;
+        opacity:0.2 !important;
+    }    
+    
+    .contents-icon {
+        color:tomato !important;
+    }
+    
+    .contents-lead {
+        margin-bottom:4rem !important;
+    }
+}
+
+@media screen and (max-width:768px) {                                           /*コンテンツ スマホ*/
+    .lead-icon {
+        display:none !important;
+    }
+    
+    .about-text {
+        font-size:1rem !important;
+        text-align:center !important;
+        margin-top:1rem !important;
+        margin-bottom:2rem !important;
+    }
+    
+    #wrapper {
+        display:flex !important;
+        flex-direction:column !important;
+        min-height:175vh !important;
+    }
+   
+    .usage {
+        display:inline-block !important;
+        text-align:center !important;
+        margin-top:2.2rem !important;
+        margin-bottom:0.8rem !important;
+    }
+    
+    .explanation-text {
+        font-size:1rem !important;
+    }
+    
+    .explanation {
+        font-size:0.8rem !important;
+        margin-bottom:0.7rem !important;
+    }
+    
+    .explanation-card {
+        margin-bottom:2rem !important;
+        background-image:url(http://free-paper-texture.com/p/p0027/p0027_s.jpg) !important;
+        background-size:cover !important;
+        border:solid black 0.11rem !important;
+        border-radius:0.2rem !important;
+        z-index:0 !important;
+    }
+    
+    .tape {
+        position:relative !important; top:2.5rem !important;
+        width:35% !important;
+        height:1.8rem !important;
+        margin:-3.5rem auto 0 !important;
+        background-color:turquoise !important;
+        transform:rotate(-2deg) !important;
+        opacity:0.2 !important;
+    }    
+    
+    .contents-icon {
+        color:tomato !important;
+        margin-top:3rem !important;
+    }
+    
+    .contents-lead {
+        margin-bottom:3.5rem !important;
+    }
+}
+
 @media screen and (min-width:768px) {                                           /*ヘッダー パソコン*/
     header {
         position:sticky !important;
@@ -124,19 +262,31 @@ body {
         white-space:nowrap !important;
         overflow:hidden !important;
     }
+    
+    .dropdown-color:hover, .dropdown-color:active {
+        display:block !important;
+        height:1.8rem !important;
+        font-weight:500 !important;
+        color:rgba(0, 0, 0,0.72) !important;
+        text-decoration:none !important;
+    }
 }
 
 @media screen and (max-width:768px) {                                           /*ヘッダー スマホ*/
     header {
         position:sticky !important;
-        line-height:1rem !important;
+        line-height:0.7rem !important;
         z-index:999 !important;
         box-shadow:0 0.3rem 0.6rem rgba(0, 0, 0, 0.05);
     }
     
+    .navbar-light .navbar-toggler {
+        border-color:white !important;
+    }
+    
     .navbar-space {
         padding-top:0.5rem !important;
-        padding-bottom:0.5rem !important;
+        padding-bottom:0.2rem !important;
     }
     
     .navbar-brand {
@@ -219,7 +369,8 @@ body {
     
     .dropdown-color {
         display:block !important;
-        height:1.8rem !important;
+        height:1.4rem !important;
+        padding-top:0.2rem !important;
         font-weight:500 !important;
         color:black !important;
         text-decoration:none !important;
@@ -228,20 +379,24 @@ body {
         white-space:nowrap !important;
         overflow:hidden !important;
     }
+    
+    /*.logout {
+        padding-bottom:0rem !important;
+    }*/
+    
+    .dropdown-color:hover, .dropdown-color:active {
+        display:block !important;
+        height:1.4rem !important;
+        font-weight:500 !important;
+        color:rgba(0, 0, 0,0.72) !important;
+        text-decoration:none !important;
+    }
 }
 
 .nav-color:hover, .nav-color:active {
     color:rgba(255,99,71,0.72) !important;
     text-decoration:none !important;
     box-shadow:none !important;
-}
-
-.dropdown-color:hover, .dropdown-color:active {
-    display:block !important;
-    height:1.8rem !important;
-    font-weight:500 !important;
-    color:rgba(0, 0, 0,0.72) !important;
-    text-decoration:none !important;
 }
 
 .dropdown-item:hover, .dropdown-item:active {
@@ -383,8 +538,7 @@ body {
         margin-bottom:4rem !important;
         background-image:url(http://free-paper-texture.com/p/p0027/p0027_s.jpg) !important;
         background-size:cover !important;
-        border:solid black !important;
-        border-width:0.11rem !important;
+        border:solid black 0.11rem !important;
         border-radius:0.2rem !important;
         z-index:0 !important;
     }
@@ -532,8 +686,7 @@ body {
         margin-bottom:4rem !important;
         background-image:url(http://free-paper-texture.com/p/p0027/p0027_s.jpg) !important;
         background-size:cover !important;
-        border:solid black !important;
-        border-width:0.11rem !important;
+        border:solid black 0.11rem !important;
         border-radius:0.2rem !important;
         z-index:0 !important;
     }
@@ -662,6 +815,15 @@ body {
     }    
 }
 
+.flex {
+    display:flex !important;
+    justify-content:space-between !important;
+}
+
+.relative {
+    position:relative !important; top:1rem !important;
+}
+
 .guide {
     color:turquoise !important;
     text-decoration:none !important;
@@ -673,10 +835,6 @@ body {
 .guide:hover, .guide:active {
     color:rgba(64, 224, 208,0.7) !important;
     text-decoration:none !important;
-}
-
-.guide-space {
-    position:relative !important; bottom:2rem !important;
 }
 
 @media screen and (min-width:768px) {                                           /*ナビタブ パソコン*/

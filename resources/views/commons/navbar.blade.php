@@ -19,7 +19,7 @@
                             <li class="dropdown-item px-3 pt-0 pb-1">{!! link_to_route('users.show', Auth::user()->name . 'の詳細', ['id' => Auth::id()], ['class' => 'dropdown-color text-left']) !!}</li>
                             <li class="dropdown-item px-3 pt-0 pb-1">{!! link_to_route('all_welcome.index', 'みんなのログ', [], ['class' => 'pb-2 dropdown-color text-left']) !!}</li>
                             <li class="dropdown-divider p-0 m-0"></li>
-                            <li class="dropdown-item px-3 pt-0 pb-1">{!! link_to_route('logout.get', 'ログアウト', [], ['class' => 'pt-2 dropdown-color text-left']) !!}</li>
+                            <li class="dropdown-item px-3 pt-0 pb-1">{!! link_to_route('logout.get', 'ログアウト', [], ['class' => 'pt-2 dropdown-color text-left logout']) !!}</li>
                         </ul>
                     </li>
                 
