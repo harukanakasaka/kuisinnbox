@@ -109,7 +109,7 @@ footer {
     #wrapper {
         display:flex !important;
         flex-direction:column !important;
-        min-height:175vh !important;
+        min-height:182vh !important;
     }
    
     .usage {
