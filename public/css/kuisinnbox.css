@@ -19,10 +19,6 @@ body {
     -webkit-text-size-adjust:100% !important;
 }
 
-.section {
-    margin-top:auto !important;
-}
-
 footer {
     margin-top:auto !important;
     color:white !important;
@@ -31,6 +27,10 @@ footer {
 }
 
 @media screen and (min-width:768px) {                                           /*コンテンツ パソコン*/
+    .section {
+        margin-top:auto !important;
+    }
+    
     .lead-icon {
         position:absolute !important; top:28rem !important; left:34rem !important;
         z-index:6 !important;
@@ -95,6 +95,11 @@ footer {
 }
 
 @media screen and (max-width:768px) {                                           /*コンテンツ スマホ*/
+    .section {
+        position:absolute !important; top:27rem !important;
+        margin-top:auto !important;
+    }
+    
     .lead-icon {
         display:none !important;
     }
@@ -109,7 +114,7 @@ footer {
     #wrapper {
         display:flex !important;
         flex-direction:column !important;
-        min-height:182vh !important;
+        min-height:175vh !important;
     }
    
     .usage {
@@ -153,7 +158,7 @@ footer {
     }
     
     .contents-lead {
-        margin-bottom:3.5rem !important;
+        margin-bottom:3rem !important;
     }
 }
 
