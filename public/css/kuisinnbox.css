@@ -96,7 +96,7 @@ footer {
 
 @media screen and (max-width:768px) {                                           /*コンテンツ スマホ*/
     .section {
-        position:absolute !important; top:27rem !important;
+        position:relative !important;
         margin-top:auto !important;
     }
     
