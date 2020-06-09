@@ -384,9 +384,9 @@ footer {
         overflow:hidden !important;
     }
     
-    /*.logout {
-        padding-bottom:0rem !important;
-    }*/
+    .logout {
+        position:relative !important; top:0.5rem !important;
+    }
     
     .dropdown-color:hover, .dropdown-color:active {
         display:block !important;
