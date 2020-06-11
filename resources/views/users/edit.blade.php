@@ -29,10 +29,10 @@
                     </div>
                     @if ($log->myfile)
                         <img src="{{ $log->myfile }}" class="photo">
-                        <p class="current-photo text-right">現在のフォト</p>
                     @else
                         <div class="no-img2">フォトはありません</div>    
                     @endif
+                    <p class="current-photo text-right">現在のフォト</p>
                 </div>
             
                 <div class="form-group">
